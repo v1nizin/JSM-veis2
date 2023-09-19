@@ -1,33 +1,38 @@
 <script>
-export default { name:"Nav" }
+export default { name: 'Nav' }
 </script>
 
 <template>
   <div class="page">
-  <header tabindex="0"><h1>JS Móveis</h1></header>
-  <div id="nav-container">
-    <div class="bg"></div>
-    <div class="button" tabindex="0">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div id="nav-content" tabindex="0">
-      <ul>
-        <li><a href="#0">Home</a></li>
-        <Routerlink><li><a href="#0">Login</a></li> </Routerlink> 
-        <li><a href="#0">Blog</a></li>
-        <li><a href="#0">About</a></li>
-        <li><a href="#0">Contact</a></li>
-        <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
-      </ul>
+    <header tabindex="0"><h1>JS Móveis</h1></header>
+    <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div id="nav-content" tabindex="0">
+        <ul>
+          <RouterLink to="/"
+            ><li><a href="#0">Home</a></li>
+          </RouterLink>
+          <RouterLink to="/teste">
+            <li><a href="#0">Produtos Cadastrados</a></li>
+          </RouterLink>
+          <RouterLink to="/login">
+          <li><a href="#0">Login</a></li>
+          </RouterLink>
+          <li><a href="#0">Contact</a></li>
+          <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
 
 * {
   outline: none;
@@ -42,7 +47,7 @@ strong {
   height: 100vh;
   font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 600;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   color: #212121;
 }
 
@@ -55,7 +60,7 @@ header {
   color: #fff;
   justify-content: center;
   align-items: center;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 main {
@@ -71,7 +76,7 @@ main > div {
 }
 
 main h2 span {
-  color: #BF7497;
+  color: #bf7497;
 }
 
 main p {
@@ -99,12 +104,12 @@ main small {
   height: calc(100% - 70px);
   visibility: hidden;
   opacity: 0;
-  transition: .3s;
+  transition: 0.3s;
   background: #000;
 }
 #nav-container:focus-within .bg {
   visibility: visible;
-  opacity: .6;
+  opacity: 0.6;
 }
 #nav-container * {
   visibility: visible;
@@ -125,14 +130,14 @@ main small {
   pointer-events: auto;
   margin-left: 25px;
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .icon-bar {
   display: block;
   width: 100%;
   height: 3px;
   background: #ffffff;
-  transition: .3s;
+  transition: 0.3s;
 }
 .icon-bar + .icon-bar {
   margin-top: 5px;
@@ -142,13 +147,13 @@ main small {
   pointer-events: none;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
-  transform: translate3d(0,8px,0) rotate(45deg);
+  transform: translate3d(0, 8px, 0) rotate(45deg);
 }
 #nav-container:focus-within .icon-bar:nth-of-type(2) {
   opacity: 0;
 }
 #nav-container:focus-within .icon-bar:nth-of-type(3) {
-  transform: translate3d(0,-8px,0) rotate(-45deg);
+  transform: translate3d(0, -8px, 0) rotate(-45deg);
 }
 
 #nav-content {
@@ -162,9 +167,9 @@ main small {
   height: calc(100% - 70px);
   background: #ececec;
   pointer-events: auto;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   transform: translateX(-100%);
-  transition: transform .3s;
+  transition: transform 0.3s;
   will-change: transform;
   contain: paint;
 }
@@ -179,11 +184,11 @@ main small {
   padding: 10px 5px;
   display: block;
   text-transform: uppercase;
-  transition: color .1s;
+  transition: color 0.1s;
 }
 
 #nav-content li a:hover {
-  color: #BF7497;
+  color: #bf7497;
 }
 
 #nav-content li:not(.small) + .small {
@@ -208,18 +213,14 @@ main small {
   transform: none;
 }
 
-
-
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -234,10 +235,13 @@ a:link {
 
 a {
   color: currentColor;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -245,5 +249,4 @@ ul {
   padding: 0;
   list-style: none;
 }
-
 </style>

@@ -2,12 +2,14 @@
 import Home from "./components/Home.vue"
 import Nav from "./components/Nav.vue";
 import Login from "./components/Login.vue"
+import Tabela from "./components/Tabela.vue"
 
 </script>
 
 <template>
-    <Nav></Nav>
-    <Login></Login>
+    <RouterView />
+    <Nav />
+    <Tabela/>
 </template>
 
 <style>

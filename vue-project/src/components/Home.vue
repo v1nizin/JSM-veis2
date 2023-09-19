@@ -1,249 +1,123 @@
 <script>
-export default { name:"Nav" }
+export default { name:"Home" }
 </script>
 
+
 <template>
-  <div class="page">
-  <header tabindex="0"><h1>JS Móveis</h1></header>
-  <div id="nav-container">
-    <div class="bg"></div>
-    <div class="button" tabindex="0">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div id="nav-content" tabindex="0">
-      <ul>
-        <li><a href="#0">Home</a></li>
-        <Routerlink><li><a href="#0">Login</a></li> </Routerlink> 
-        <li><a href="#0">Blog</a></li>
-        <li><a href="#0">About</a></li>
-        <li><a href="#0">Contact</a></li>
-        <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+    <div class="Inputs">
+            <h1 class="h1_home">Cadastro de Móveis</h1>
+
+            <input class="input_movel" type="text" placeholder="Móvel">
+            
+            <input type="text" placeholder="Quantidade">
+
+            <input type="text" placeholder="Material">
+            
+            <input type="text" placeholder="Tamanho">
+            
+            <input type="text" placeholder="Código do Produto">
+
+            <button class="Cadastrar">Cadastrar</button>
+    </div>    
 </template>
 
 <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,600');
 
-* {
-  outline: none;
-}
-
-strong {
-  font-weight: 600;
+.Inputs {
+    margin-left: 8px;
+    margin-top: 150px;
 }
 
-.page {
-  width: 100%;
-  height: 100vh;
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-weight: 600;
-  letter-spacing: .03em;
-  color: #212121;
+input {
+    height: 5vh;
+    margin-bottom: 35px;
+    margin-left: 290px;
+    margin-top: 2px;
+    border-radius: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+   
 }
 
-header {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  height: 70px;
-  background: #df7d0c;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
+.Cadastrar {
+    margin-top: 60px;
+    margin-left: 300px;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+    }
 
-main {
-  padding: 70px 20px 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+    .Cadastrar:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+    }
 
-main > div {
-  margin: auto;
-  max-width: 600px;
-}
+    .Cadastrar:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+    }
 
-main h2 span {
-  color: #BF7497;
-}
+    .Cadastrar:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+    }
 
-main p {
-  line-height: 1.5;
-  font-weight: 200;
-  margin: 20px 0;
-}
+    .Cadastrar:hover {
+    color: #ffffff;
+    border: 1px solid #009087;
+    }
 
-main small {
-  font-weight: 300;
-  color: #888;
-}
+    .Cadastrar:hover:before {
+    top: -35%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+    }
 
-#nav-container {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  pointer-events: none;
-}
-#nav-container .bg {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 70px);
-  visibility: hidden;
-  opacity: 0;
-  transition: .3s;
-  background: #000;
-}
-#nav-container:focus-within .bg {
-  visibility: visible;
-  opacity: .6;
-}
-#nav-container * {
-  visibility: visible;
-}
-
-.button {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 1;
-  border: 0;
-  background: transparent;
-  border-radius: 0;
-  height: 70px;
-  width: 30px;
-  cursor: pointer;
-  pointer-events: auto;
-  margin-left: 25px;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.icon-bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #ffffff;
-  transition: .3s;
-}
-.icon-bar + .icon-bar {
-  margin-top: 5px;
-}
-
-#nav-container:focus-within .button {
-  pointer-events: none;
-}
-#nav-container:focus-within .icon-bar:nth-of-type(1) {
-  transform: translate3d(0,8px,0) rotate(45deg);
-}
-#nav-container:focus-within .icon-bar:nth-of-type(2) {
-  opacity: 0;
-}
-#nav-container:focus-within .icon-bar:nth-of-type(3) {
-  transform: translate3d(0,-8px,0) rotate(-45deg);
-}
-
-#nav-content {
-  margin-top: 70px;
-  padding: 20px;
-  width: 90%;
-  max-width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100% - 70px);
-  background: #ececec;
-  pointer-events: auto;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  transform: translateX(-100%);
-  transition: transform .3s;
-  will-change: transform;
-  contain: paint;
-}
-
-#nav-content ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-#nav-content li a {
-  padding: 10px 5px;
-  display: block;
-  text-transform: uppercase;
-  transition: color .1s;
-}
-
-#nav-content li a:hover {
-  color: #BF7497;
-}
-
-#nav-content li:not(.small) + .small {
-  margin-top: auto;
-}
-
-.small {
-  display: flex;
-  align-self: center;
-}
-
-.small a {
-  font-size: 12px;
-  font-weight: 400;
-  color: #888;
-}
-.small a + a {
-  margin-left: 15px;
-}
-
-#nav-container:focus-within #nav-content {
-  transform: none;
+    .Cadastrar:hover:after {
+    top: -45%;
+    background-color: #73d66a;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 
 
-
-
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.h1_home {
+    margin-left: 255px;
+    margin-bottom: 40px;
 }
-
-html, body {
-  height: 100%;
-}
-
-a,
-a:visited,
-a:focus,
-a:active,
-a:link {
-  text-decoration: none;
-  outline: 0;
-}
-
-a {
-  color: currentColor;
-  transition: .2s ease-in-out;
-}
-
-h1, h2, h3, h4 {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
 </style>
