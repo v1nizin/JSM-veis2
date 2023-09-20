@@ -8,8 +8,6 @@ import Tabela from "./components/Tabela.vue"
 
 <template>
     <RouterView />
-    <Nav />
-    <Tabela/>
 </template>
 
 <style>
@@ -17,6 +15,5 @@ import Tabela from "./components/Tabela.vue"
         padding: 0px;
         margin: 0px;
     }
-    
 
 </style>

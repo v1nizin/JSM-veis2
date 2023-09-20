@@ -122,13 +122,12 @@ h2{
     padding: 30px 0;
 }
 
-/* Table Styles */
 
 .table-wrapper{
     margin: 10px 70px 70px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
     margin-top: 15vh;
-    margin-left: 100px;
+    margin-right: -250px;
 }
 
 .fl-table {

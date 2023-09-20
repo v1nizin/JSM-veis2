@@ -24,7 +24,7 @@ export default { name:"Home" }
 <style scoped>
 
 .Inputs {
-    margin-left: 8px;
+    margin-left: -70px;
     margin-top: 150px;
 }
 
@@ -41,7 +41,7 @@ input {
 }
 
 .Cadastrar {
-    margin-top: 60px;
+    margin-top: 35px;
     margin-left: 300px;
     border-radius: 30px;
     height: 50px;
@@ -110,7 +110,7 @@ input {
 
     .Cadastrar:hover:after {
     top: -45%;
-    background-color: #73d66a;
+    background-color: #df7d0c;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 

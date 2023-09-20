@@ -8,19 +8,19 @@ export default { name:"Login" }
   <form>
     <div class="user-box">
       <input type="text" name="" required="">
-      <label>Username</label>
+      <label>Usuário</label>
     </div>
     <div class="user-box">
       <input type="password" name="" required="">
-      <label>Password</label>
+      <label>Senha</label>
     </div>
-    <a href="#">
+   
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Submit
-    </a>
+      <RouterLink to="/TelaInicial">Entrar</RouterLink>
+
   </form>
 </div>
 </template>

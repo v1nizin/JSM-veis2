@@ -13,18 +13,26 @@ export default { name: 'Nav' }
         <span class="icon-bar"></span>
       </div>
       <div id="nav-content" tabindex="0">
-        <ul>
-          <RouterLink to="/"
-            ><li><a href="#0">Home</a></li>
+        <ul class="nav-principal">
+          <RouterLink to="/TelaInicial"
+            ><li><a href="#0">Cadastrar Movéis</a></li>
           </RouterLink>
-          <RouterLink to="/teste">
+          <RouterLink to="/Produtos">
             <li><a href="#0">Produtos Cadastrados</a></li>
           </RouterLink>
-          <RouterLink to="/login">
-          <li><a href="#0">Login</a></li>
+          <RouterLink to="">
+            <li><a href="#0">EXEMPLO</a></li>
           </RouterLink>
-          <li><a href="#0">Contact</a></li>
-          <li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>
+        </ul>
+        <ul id="social-container">
+          <RouterLink to="/Login">
+            <li class="logout"><a href="#0">Logout</a></li>
+          </RouterLink>
+          
+<!--           <li class="small"><a href="#0">Instagram</a></li>
+          <li class="small">
+            <a href="#0">Facebook</a>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -38,6 +46,12 @@ export default { name: 'Nav' }
   outline: none;
 }
 
+.logout {
+}
+#social-container {
+  display: flex;
+  flex-direction: row;
+}
 strong {
   font-weight: 600;
 }
@@ -174,7 +188,7 @@ main small {
   contain: paint;
 }
 
-#nav-content ul {
+#nav-content .nav-principal {
   height: 100%;
   display: flex;
   flex-direction: column;
