@@ -171,21 +171,23 @@ main small {
 }
 
 #nav-content {
-  margin-top: 70px;
-  padding: 20px;
-  width: 90%;
-  max-width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100% - 70px);
-  background: #ececec;
-  pointer-events: auto;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transform: translateX(-100%);
-  transition: transform 0.3s;
-  will-change: transform;
-  contain: paint;
+    /* margin-top: 70px; */
+    padding: 20px;
+    width: 90%;
+    max-width: 300px;
+    /* position: absolute; */
+    top: 0;
+    display: flex;
+    left: 0;
+    height: calc(100vh - 70px);
+    background: #ececec;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: translateX(-100%); 
+    transition: transform 0.3s;
+    will-change: transform;
+    contain: paint;
+    flex-direction: column;
 }
 
 #nav-content .nav-principal {

@@ -24,7 +24,7 @@ export default { name:"Home" }
 <style scoped>
 
 .Inputs {
-    margin-left: -70px;
+    margin-left: 5px;
     margin-top: 150px;
 }
 
